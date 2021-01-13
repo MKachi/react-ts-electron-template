@@ -1,24 +1,20 @@
 'use strict'
 
-const {
-  merge
-} = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const base = require('./webpack.base')
 const config = require('../config')
 
-const {
-  BundleAnalyzerPlugin
-} = require('webpack-bundle-analyzer')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const getPlugins = () => {
   const plugins = []
-  const analyzer = config.useAnalyzer ?
-    new BundleAnalyzerPlugin({
-      analyzerHost: config.analyzer.host,
-      analyzerPort: config.analyzer.port
-    }) :
-    null
+  const analyzer = config.useAnalyzer
+    ? new BundleAnalyzerPlugin({
+        analyzerHost: config.analyzer.host,
+        analyzerPort: config.analyzer.port
+      })
+    : null
 
   if (analyzer != null) {
     plugins.push(analyzer)
@@ -39,7 +35,7 @@ module.exports = merge(base, {
   devServer: {
     host: config.devServer.host,
     port: config.devServer.port,
-    open: true
+    open: false
   },
   plugins: getPlugins()
 })

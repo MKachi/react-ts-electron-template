@@ -1,11 +1,14 @@
-# mkachi-react-typescript-template
-My react-typescript project template
+# react-ts-electron-template
+My react-typescript-electron project template
+
+## Build Directories
+* **build/ui** : react webpack build files
+* **build/app** : electron build files
 
 ## Scripts
 
-* **build** : webpack build project
-* **develop** : start webpack-dev-server
-* **proxy** : start webpack-dev-server and proxy server for external access
+* **build** : react & electron build project
+* **develop** : start webpack-dev-server & electron
 * **lint** : eslint rule check
 * **lint-fix** : modify the code to eslint rules
 
@@ -19,12 +22,10 @@ My react-typescript project template
 * **public** : public directory path
 * **useLint** : if useLint is true, Check the eslint rules
 * **useAnalyzer** : if useAnalyzer is true, Visualize the capacity of the bundle
-* **usePWA** : if usePWA is true, Apply settings required for pwa
 * **showLintError** : if showLintError is true, Show errors in eslint
 * **`devServer`**
   * **host** : development server host
   * **port** : development server port
-  * **proxy** : development server proxy port
 * **`analyzer`**
   * **host** : analyzer page server host
   * **port** : analyzer page server port
